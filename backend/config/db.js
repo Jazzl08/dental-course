@@ -2,15 +2,13 @@ import pg from 'pg';
 
 const { Pool } = pg;
 
-const isServerless = process.env.VERCEL === '1';
-
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: process.env.NODE_ENV === 'production'
     ? { rejectUnauthorized: true }
     : { rejectUnauthorized: false },
-  max: isServerless ? 1 : 20,
-  idleTimeoutMillis: isServerless ? 0 : 30_000,
+  max: 2,
+  idleTimeoutMillis: 10_000,
   connectionTimeoutMillis: 5_000,
 });
 
@@ -32,4 +30,3 @@ const testConnection = async () => {
 };
 
 export { query, getClient, testConnection, pool };
-s
