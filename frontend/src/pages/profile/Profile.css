@@ -1,0 +1,112 @@
+.profile-page {
+  --color-bg:           #EBF7F3;
+  --color-bg-alt:       #D8F3EA;
+  --color-dark:         #0a1a10;
+  --color-dark-alt:     #0d2318;
+  --color-border:       #B8DDD0;
+  --color-border-light: #CCF0E4;
+  --color-text-muted:   #4A6B5E;
+  --color-text-light:   #7AAAA0;
+  background-color: var(--color-bg);
+}
+
+.profile-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.profile-container {
+  max-width: 720px;
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-16);
+}
+
+.profile-header {
+  padding-bottom: var(--space-10);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-10);
+}
+
+.profile-header__label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.profile-header__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+}
+
+.profile-section {
+  margin-bottom: var(--space-2);
+}
+
+.profile-section__head {
+  margin-bottom: var(--space-8);
+}
+
+.profile-section__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.profile-section__desc {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.profile-divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--space-10) 0;
+}
+
+.profile-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.profile-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9375rem;
+}
+
+.profile-info-item__label {
+  color: var(--color-text-muted);
+}
+
+.profile-info-item__value {
+  color: var(--color-text);
+  font-weight: 500;
+  text-transform: capitalize;
+}

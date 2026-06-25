@@ -1,0 +1,214 @@
+.auth-page {
+  --color-bg:           #EBF7F3;
+  --color-bg-alt:       #D8F3EA;
+  --color-dark:         #0a1a10;
+  --color-dark-alt:     #0d2318;
+  --color-border:       #B8DDD0;
+  --color-border-light: #CCF0E4;
+  --color-text-muted:   #4A6B5E;
+  --color-text-light:   #7AAAA0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg-alt);
+}
+
+.auth-page__inner {
+  width: 100%;
+  max-width: 480px;
+  padding: var(--space-8) var(--space-6);
+}
+
+.auth-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: var(--space-12) var(--space-10);
+  opacity: 0;
+}
+
+.auth-card__header {
+  margin-bottom: var(--space-8);
+}
+
+.auth-card__label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.auth-card__title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  line-height: 1.1;
+}
+
+.auth-error {
+  background: var(--color-error-light);
+  border: 1px solid rgba(184, 64, 64, 0.2);
+  border-left: 3px solid var(--color-error);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: var(--space-4) var(--space-5);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-error);
+  margin-bottom: var(--space-6);
+}
+
+.auth-success {
+  background: var(--color-accent-light);
+  border: 1px solid rgba(61, 107, 92, 0.2);
+  border-left: 3px solid var(--color-success);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: var(--space-4) var(--space-5);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-success);
+  margin-bottom: var(--space-6);
+}
+
+.login-unverified {
+  background: #FFFBEB;
+  border-left: 2px solid var(--color-gold);
+  padding: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.login-unverified__text {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: var(--space-3);
+}
+
+.login-unverified__btn {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--color-gold);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.login-unverified__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.login-unverified__sent {
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-field__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-field__label {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+.form-field__input {
+  width: 100%;
+  padding: 0.875rem var(--space-4);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  outline: none;
+  transition: border-color var(--transition-base);
+  appearance: none;
+  border-radius: 0;
+}
+
+.form-field__input::placeholder {
+  color: var(--color-text-light);
+}
+
+.form-field__input:focus {
+  border-color: var(--color-accent);
+}
+
+.form-field__input:invalid:not(:placeholder-shown) {
+  border-color: var(--color-error);
+}
+
+.form-field__link {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.form-field__link:hover {
+  color: var(--color-accent);
+}
+
+.form-field__hint {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.auth-form__submit {
+  width: 100%;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.auth-card__footer {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-6);
+}
+
+.auth-card__footer-link {
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity var(--transition-base);
+}
+
+.auth-card__footer-link:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: var(--space-8) var(--space-6);
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"C:\\\\Users\\\\lensj\\\\Desktop\\\\dental-course-frontend\" && find . -mindepth 1 | wc -l)",
+      "Read(//c/Users/lensj/Desktop/dental-course-frontend/**)",
+      "Skill(artifact-design)",
+      "Skill(artifact-design:*)"
+    ]
+  }
+}
