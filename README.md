@@ -1,4 +1,4 @@
-# 🦷 MondhygiëneCursus – Backend API
+# MondhygiëneCursus – Backend API
 
 Production-ready Node.js + Express backend voor een online cursusplatform over tanden poetsen en flossen.
 
